@@ -22,4 +22,6 @@
 //= require angular-material-icons
 //= require svg-morpheus
 //= require omni_app
+//= require ngAutocomplete
+//= require google-maps
 //= require_tree .
