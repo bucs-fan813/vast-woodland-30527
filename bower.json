@@ -1,0 +1,23 @@
+{
+  "name": "vast-woodland-30527",
+  "authors": [
+    "John Russell <jb.fresh@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-animate": "^1.5.6",
+    "angular-material": "^1.0.9",
+    "angular-material-icons": "^0.7.0"
+  }
+}
