@@ -21,4 +21,5 @@
 //= require angular-messages
 //= require angular-material-icons
 //= require svg-morpheus
+//= require omni_app
 //= require_tree .
