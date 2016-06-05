@@ -1,0 +1,2 @@
+class OmniHomeController < ApplicationController
+end

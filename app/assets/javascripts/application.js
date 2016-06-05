@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
+//= require angular
+//= require angular-animate
+//= require angular-material
+//= require angular-aria
+//= require angular-messages
+//= require angular-material-icons
+//= require svg-morpheus
 //= require_tree .
