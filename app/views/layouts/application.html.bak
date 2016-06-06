@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <title>VastWoodland30527</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.4/angular-material.min.css">
+<script type="text/javascript"
+	src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+</head>
+
+<body ng-app="App">
+<%= yield %>
+
+	<div id="wrapper">
+		<header>
+
+			<div class="container">
+				<nav class="nav-buttons">
+					<div layout="row" layout-wrap>
+						<ng-md-icon style="fill: white; display:none;" icon="menu" size="45"
+							ng-click="toggleMenu()"></ng-md-icon>
+						<a class="navbar-brand" href="index.html"> 
+<%= image_tag "icon.png" %>
+						</a> <span flex></span>
+
+						<div>
+							<md-button class="btn-blue">Host</md-button>
+							<md-button class="btn-blue">Visit</md-button>
+							<md-menu> <md-button md-menu-origin
+								ng-click="$mdOpenMenu()" class="btn-blue">Help</md-button> <md-menu-content
+								width="2"> <md-menu-item> <md-button>Help</md-button>
+							</md-menu-item> <md-menu-item> <md-button>About</md-button> </md-menu-item> </md-menu-content> </md-menu>
+
+
+							<md-button class="btn-black" ng-controller="locationCtrl"
+								ng-click="changeLocation('authenticated.html')">Login</md-button>
+							<md-button ng-controller="JoinCtrl" id="modal_join.html"
+								class="md-raised md-warn btn-orange" ng-click="open($event)">Join</md-button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<div id="content" md-content flex layout-padding
+				class="md-whiteframe-2dp ">
+				<section>
+					<div class="container" ng-controller="locationCtrl">
+						<h1 class="md-display-3">Where do you want to go?</h1>
+						<p class="md-subhead">Book homes from local hosts in 191+
+							countries and experience a place like you live there.</p>
+						<!--                         <input class="round-input" id="custom_filter" placeholder="FILTER" type="text"> -->
+						<input class="round-input" id="Autocomplete2"
+							ng-model="autocomplete" ng-autocomplete options="options"
+							details="details" />
+					</div>
+				</section>
+
+
+			</div>
+			<footer>
+				<div id="info-bar">
+					<div class="container clearfix">
+						<span class="all-tutorials"><a
+							href="http://www.callmenick.com/tutorials">&larr; all
+								tutorials</a></span> <span class="back-to-tutorial"><a
+							href="http://www.callmenick.com/tutorials/create-an-animated-resizing-header-on-scroll">back
+								to the tutorial</a></span>
+					</div>
+				</div>
+			</footer>
+
+
+		</div>
+		<div layout="vertical">
+			<md-sidenav class="md-sidenav-left md-whiteframe-z2 gray-bg"
+				md-component-id="left" flex>
+			<form>
+				<md-toolbar class="md-theme-dark"> <!--                        <h1 class="md-toolbar-tools">Sidenav Right</h1>-->
+				<md-input-container> <label for="testInput"
+					class="dim">Search example.org</label> <input type="text"
+					id="testInput" ng-model="data" md-autofocus> <!--
+                            <md-icon>
+                                <ng-md-icon icon="search" size="36"></ng-md-icon>
+                            </md-icon>
+--> </md-input-container> <ng-md-icon ng-controller="MenuCtrl" class="close_button"
+					style="fill: white;" icon="close" ng-click="toggleMenu()"></ng-md-icon>
+
+				</md-toolbar>
+				<md-content md-theme="docs-dark">
+				<ul class="nav side-nav">
+					<li><a href="#" class="md-warn join">Join for Free</a></li>
+					<li><a href="#">Host</a></li>
+					<li><a href="#">Calendar</a></li>
+					<li><a href="#">Resources</a></li>
+					<li><a href="#">Organizations</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+				</md-content>
+			</form>
+			</md-sidenav>
+		</div>
+	</div>
+</body>
+
+</html>

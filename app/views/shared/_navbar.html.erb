@@ -1,0 +1,18 @@
+<md-toolbar>
+	<div class="md-toolbar-tools">
+	<md-button>Home</md-button>
+	<span flex></span> 
+	
+	<% if(!user_signed_in?) %>
+		<%= link_to "<md-button class='md-raised md-accent'>Log In</md-button>".html_safe, new_user_session_path %>
+		<%= link_to "<md-button class='md-raised md-warn'>Sign Up</md-button>".html_safe, new_user_registration_path %>
+	<% else %>
+		<md-button>Your Trips</md-button>
+		<md-button>Host</md-button>
+		<md-button>Guest</md-button>
+		<%= link_to "<md-button class='md-raised md-warn'>Log Out</md-button>".html_safe, destroy_user_session_path, method: :delete %>
+		
+<!-- 			 link_to "<md-button>Edit Profile</md-button>".html_safe, edit_user_registration_path  -->
+	<% end %>
+</div>
+</md-toolbar>
