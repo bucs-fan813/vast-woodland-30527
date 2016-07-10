@@ -1,5 +1,5 @@
 class AddFullnameToUser < ActiveRecord::Migration
   def change
-    add_column :users, :fullame, :string
+    add_column :users, :fullname, :string
   end
 end
