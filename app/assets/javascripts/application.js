@@ -25,3 +25,4 @@
 //= require ngAutocomplete
 //= require google-maps
 //= require_tree .
+//= require_self
