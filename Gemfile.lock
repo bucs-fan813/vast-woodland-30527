@@ -159,7 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  devise
+  devise (= 4.1.1)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
